@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/me_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 顶部菜单栏（无按钮） -->
+    <LinearLayout
+        android:id="@+id/top_menu_bar_me"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="?attr/colorPrimary">
+
+        <!-- 页面标题 -->
+        <TextView
+            android:id="@+id/text_view_me_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 分隔线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- 主要内容区域 -->
+    <LinearLayout
+        android:id="@+id/linear_layout_me_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 显示用户ID -->
+        <TextView
+            android:id="@+id/text_view_user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户ID: UID123456"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- “我的帖子”按钮 -->
+        <Button
+            android:id="@+id/button_my_posts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的帖子"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 注销按钮 -->
+        <Button
+            android:id="@+id/button_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注销" />
+    </LinearLayout>
+
+    <!-- 底部导航栏 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:menu="@menu/bottom_navigation_menu"
+        app:labelVisibilityMode="labeled" />
+
+</LinearLayout>

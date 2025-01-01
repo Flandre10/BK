@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_post_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 顶部菜单栏 -->
+    <LinearLayout
+        android:id="@+id/top_menu_bar_add"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/colorPrimary">
+
+        <!-- 返回按钮 -->
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"
+            android:contentDescription="返回"
+            app:tint="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- 分隔线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 帖子标题输入框 -->
+    <EditText
+        android:id="@+id/edit_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="帖子标题"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 帖子正文内容输入框 -->
+    <EditText
+        android:id="@+id/edit_text_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="正文内容"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 发表按钮 -->
+    <Button
+        android:id="@+id/button_publish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发表"
+        android:layout_gravity="end" />
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/post_detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 顶部菜单栏 -->
+    <LinearLayout
+        android:id="@+id/top_menu_bar_post_detail"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="?attr/colorPrimary">
+
+        <!-- 返回按钮 -->
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"
+        android:contentDescription="返回"
+        app:tint="@android:color/white" />
+
+        <!-- 页面标题 -->
+        <TextView
+            android:id="@+id/text_view_post_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帖子详情"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+    <!-- 分隔线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- 帖子详情内容 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 作者邮箱 -->
+            <TextView
+                android:id="@+id/text_view_detail_author_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作者邮箱: user@example.com"
+                android:textSize="16sp"
+                android:textColor="@android:color/black" />
+
+            <!-- 分隔线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- 帖子标题 -->
+            <TextView
+                android:id="@+id/text_view_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题: 帖子标题"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <!-- 帖子正文 -->
+            <TextView
+                android:id="@+id/text_view_detail_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内容: 这是帖子的详细内容。"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <!-- 帖子发布时间 -->
+            <TextView
+                android:id="@+id/text_view_detail_timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布时间: 2024-04-27 12:34"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

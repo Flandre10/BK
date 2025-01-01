@@ -1,0 +1,10 @@
+<!-- strings.xml -->
+<resources>
+    <string name="app_name">BKApp</string>
+    <string name="login">登录</string>
+    <string name="welcome">欢迎来到首页！</string>
+    <string name="email">邮箱</string>
+    <string name="password">密码</string>
+    <string name="enter_email">请输入邮箱</string>
+    <string name="enter_password">请输入密码</string>
+</resources>

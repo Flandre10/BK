@@ -1,0 +1,7 @@
+<!-- res/values/styles.xml -->
+<resources>
+    <style name="ImageRoundShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+</resources>
